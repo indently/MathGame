@@ -12,7 +12,7 @@ struct AnswerButton: View {
     
     var body: some View {
         Text("\(number)")
-        .frame(width: 100, height: 100)
+        .frame(width: 110, height: 110)
         .font(.system(size: 40, weight: .bold))
         .foregroundColor(Color.white)
         .background(Color.blue)
@@ -23,6 +23,6 @@ struct AnswerButton: View {
 
 struct AnswerButton_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerButton(number: 0)
+        AnswerButton(number: 1000)
     }
 }

@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @State var correctAnswer = 0
     @State var choiceArray : [Int] = [0, 1, 2, 3]
-    @State var firstNumber = Int.random(in: 0...100)
-    @State var secondNumber = Int.random(in: 0...100)
+    @State var firstNumber = 0
+    @State var secondNumber = 0
+    @State var difficulty = 1000
     @State var score = 0
     
     
@@ -62,14 +63,14 @@ struct ContentView: View {
     
     
     func generateAnswers(){
-        firstNumber = Int.random(in: 0...100)
-        secondNumber = Int.random(in: 0...100)
+        firstNumber = Int.random(in: 0...(difficulty/2))
+        secondNumber = Int.random(in: 0...(difficulty/2))
         var answerList = [Int]()
         
         correctAnswer = firstNumber + secondNumber
         
         for i in 0...2 {
-            answerList.append(Int.random(in: 0...200))
+            answerList.append(Int.random(in: 0...difficulty))
         }
         
         answerList.append(correctAnswer)
