@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var correctAnswer = 0
-    @State var choiceArray : [Int] = [0, 1, 2, 3]
-    @State var firstNumber = 0
-    @State var secondNumber = 0
-    @State var difficulty = 1000
-    @State var score = 0
+    @State private var correctAnswer = 0
+    @State private var choiceArray : [Int] = [0, 1, 2, 3]
+    @State private var firstNumber = 0
+    @State private var secondNumber = 0
+    @State private var difficulty = 1000
+    @State private var score = 0
     
     
     var body: some View {
