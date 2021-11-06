@@ -52,9 +52,7 @@ struct ContentView: View {
     }
     
     func answerIsCorrect(answer: Int){
-        let isCorrect = answer == correctAnswer ? true : false
-        
-        if isCorrect {
+        if answer == correctAnswer {
             self.score += 1
         } else {
             self.score -= 1
